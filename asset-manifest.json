@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sootube/static/css/main.18ee1790.css",
-    "main.js": "/sootube/static/js/main.5e725c58.js",
+    "main.css": "/sootube/static/css/main.f1e0d6c3.css",
+    "main.js": "/sootube/static/js/main.6c374f59.js",
     "index.html": "/sootube/index.html",
-    "main.18ee1790.css.map": "/sootube/static/css/main.18ee1790.css.map",
-    "main.5e725c58.js.map": "/sootube/static/js/main.5e725c58.js.map"
+    "main.f1e0d6c3.css.map": "/sootube/static/css/main.f1e0d6c3.css.map",
+    "main.6c374f59.js.map": "/sootube/static/js/main.6c374f59.js.map"
   },
   "entrypoints": [
-    "static/css/main.18ee1790.css",
-    "static/js/main.5e725c58.js"
+    "static/css/main.f1e0d6c3.css",
+    "static/js/main.6c374f59.js"
   ]
 }
