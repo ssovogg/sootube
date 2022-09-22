@@ -5,16 +5,11 @@ import Header from "./components/Layout/Header/Header";
 import SearchTabs from "./components/Layout/SearchTabs/SearchTabs";
 import Video from "./components/Video/Video";
 import Videos from "./components/Videos/Videos";
+import AppRouter from "./pages/AppRouter";
 
 function App() {
-  const [video, setVideo] = useState();
   const [videos, setVideos] = useState([]);
   const [query, setQuery] = useState("");
-  const [showVideoMode, setShowVideoMode] = useState(false);
-  const showVideoHandler = (video) => {
-    setVideo(video);
-    setShowVideoMode(true);
-  };
   const onSearch = (query) => setQuery(query);
   useEffect(() => {
     var requestOptions = {
@@ -30,7 +25,6 @@ function App() {
       .then((result) => setVideos(result.items))
       .catch((error) => console.log("error", error));
   }, []);
-
   useEffect(() => {
     const requestOptions = {
       method: "GET",
@@ -48,13 +42,7 @@ function App() {
   return (
     <>
       <Header onSearch={onSearch} />
-      <section>
-      {showVideoMode && <Video video={video} />}
-      <div>
-      <SearchTabs onSearch={onSearch} />
-      <Videos videos={videos} showVideo={showVideoHandler} />
-      </div>
-      </section>
+      <AppRouter videos={videos} />
     </>
   );
 }
