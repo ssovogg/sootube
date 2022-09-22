@@ -11,17 +11,20 @@
 .header h1 {}
 .header input {
   flex: 1;
-  padding: 0.5em;
+  width: 30vw;
+  padding: 0.8em;
   color: cWhite;
   background: cBlack;
   border: 1px solid cddGrey;
+  font-size: 0.9em;
 }
 .header input:focus {
   outline: none;
   border: 1px solid blue;
 }
 .header button {
-  padding: 0.5em;
+  font-size: 0.9em;
+  padding: 0.8em;
   color: cWhite;
   background: cddGrey;
   border: 1px solid cddGrey;

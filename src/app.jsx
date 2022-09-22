@@ -2,9 +2,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./app.css";
 import Header from "./components/Layout/Header/Header";
-import SearchTabs from "./components/Layout/SearchTabs/SearchTabs";
-import Video from "./components/Video/Video";
-import Videos from "./components/Videos/Videos";
 import AppRouter from "./pages/AppRouter";
 
 function App() {
@@ -41,7 +38,7 @@ function App() {
   }, [query]);
   return (
     <>
-      <Header onSearch={onSearch} />
+      {/* <Header onSearch={onSearch} /> */}
       <AppRouter videos={videos} />
     </>
   );

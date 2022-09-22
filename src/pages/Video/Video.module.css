@@ -1,6 +1,7 @@
-@value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../common/color.css';
+@value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../../components/common/color.css';
 
 .video {
+  width: 60%;
   padding: 1.5em;
   color: cWhite;
   background: cBlack;
@@ -11,7 +12,7 @@
 }
 .iframe iframe{
   width: 90vw;
-  height: 50vw;
+  height: 30vw;
 }
 .video_info {
   padding: 1.5em 1em;
@@ -26,4 +27,14 @@
   font-family: inherit;
   white-space: pre-wrap;
   line-height: 1.5;
+}
+
+@media screen and (max-width:50em) {
+  .video {
+    width: 100%;
+  }
+  .iframe iframe{
+    width: 90vw;
+    height: 50vw;
+  }
 }

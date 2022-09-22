@@ -1,8 +1,13 @@
 @value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../common/color.css';
 
 .video-list {
+  cursor: pointer;
   color: cWhite;
   padding-bottom: 1em;
+  transition: transform 200ms ease-in;
+}
+.video-list:hover {
+  transform: scale(1.03);
 }
 
 .img {

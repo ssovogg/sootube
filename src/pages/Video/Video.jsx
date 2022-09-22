@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./Video.module.css";
 
-const Video = ({ video }) => (
+const Video = ({ video }) => {
+  console.log(video);
+  return (
   <section className={classes.video}>
     <div className={classes.iframe}>
       <iframe
@@ -20,6 +22,6 @@ const Video = ({ video }) => (
       <pre>{video.snippet.description}</pre>
     </div>
   </section>
-);
+)};
 
 export default Video;
