@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sootube/static/css/main.18ee1790.css",
+    "main.js": "/sootube/static/js/main.5e725c58.js",
+    "index.html": "/sootube/index.html",
+    "main.18ee1790.css.map": "/sootube/static/css/main.18ee1790.css.map",
+    "main.5e725c58.js.map": "/sootube/static/js/main.5e725c58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18ee1790.css",
+    "static/js/main.5e725c58.js"
+  ]
+}
