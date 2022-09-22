@@ -1,0 +1,29 @@
+@value cdGrey, cWhite, cBlack, cddGrey from '../../common/color.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: cWhite;
+  background: cdGrey;
+}
+.header h1 {}
+.header input {
+  flex: 1;
+  padding: 0.5em;
+  color: cWhite;
+  background: cBlack;
+  border: 1px solid cddGrey;
+}
+.header input:focus {
+  outline: none;
+  border: 1px solid blue;
+}
+.header button {
+  padding: 0.5em;
+  color: cWhite;
+  background: cddGrey;
+  border: 1px solid cddGrey;
+  cursor: pointer;
+}

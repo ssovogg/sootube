@@ -1,0 +1,32 @@
+@value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../../common/color.css';
+
+.tabs {
+  display: flex;
+  background: cdGrey;
+  border: 1px solid cddGrey;
+  padding: 0.8em 1em;
+}
+.tabs li {
+  padding: 0.5em 0;
+  margin-right: 0.7em;
+}
+
+.tabs li input {
+  display: none;
+}
+.tabs li input+label{
+  color: cWhite;
+  font-size: 0.9em;
+  border: 1px solid cGrey;
+  background: cddGrey;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  transition: all 150ms ease-in;
+}
+.tabs li input+label:hover {
+  background: cGrey;
+}
+.tabs li input:checked+label{
+  color: cdGrey;
+  background: cWhite;
+}

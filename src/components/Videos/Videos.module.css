@@ -1,0 +1,26 @@
+@value cdGrey, cWhite, cBlack, cddGrey from '../common/color.css';
+
+.videos {
+  padding: 0 2em;
+  padding-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 1rem));
+  gap: 1em;
+  background: cddGrey;
+}
+
+@media screen and (max-width: 70em) {
+  .videos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 50em) {
+  .videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 35em) {
+  .videos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

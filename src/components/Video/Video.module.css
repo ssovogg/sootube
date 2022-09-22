@@ -1,0 +1,29 @@
+@value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../common/color.css';
+
+.video {
+  padding: 1.5em;
+  color: cWhite;
+  background: cBlack;
+}
+.iframe {
+  display: flex;
+  justify-content: center;
+}
+.iframe iframe{
+  width: 90vw;
+  height: 50vw;
+}
+.video_info {
+  padding: 1.5em 1em;
+}
+.video_info h2 {
+  margin-bottom: 0.5em;
+}
+.video_info h3 {
+  margin-bottom: 0.5em;
+}
+.video_info pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
