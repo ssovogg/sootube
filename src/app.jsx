@@ -15,7 +15,7 @@ function App() {
     };
 
     fetch(
-      "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBRMVXtPaG4-SxkNUfyrjgE-2J5Dtyew-8",
+      "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=AIzaSyBRMVXtPaG4-SxkNUfyrjgE-2J5Dtyew-8",
       requestOptions
     )
       .then((response) => response.json())
@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       {/* <Header onSearch={onSearch} /> */}
-      <AppRouter videos={videos} />
+      <AppRouter videos={videos} onSearch={onSearch}/>
     </>
   );
 }

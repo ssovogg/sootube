@@ -12,7 +12,7 @@
 
 .img {
   overflow: hidden;
-  height: 31vh;
+  height: 13vw;
 }
 .img img {
   width: 100%;
@@ -33,4 +33,20 @@
   color: cGrey;
   font-size: 0.9em;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 70rem) {
+  .img {
+    height: 17vw;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .img {
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 35rem) {
+  .img {
+    height: 50vw;
+  }
 }
