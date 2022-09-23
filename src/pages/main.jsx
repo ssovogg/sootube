@@ -6,11 +6,12 @@ import SearchTabs from "../components/Layout/SearchTabs/SearchTabs";
 import Videos from "../components/Videos/Videos";
 import classes from './Main.module.css';
 
-const Main = ({ videos, setVideoHandler }) => {
+const Main = ({ videos, setVideoHandler, youtube }) => {
   const navigate = useNavigate();
-  const showVideoHandler = (video) => {
+  const showVideoHandler = async (video) => {
     navigate(`/player`);
-    setVideoHandler(video);
+    const channelInfo = await youtube.channel(video.snippet.channelId);
+    setVideoHandler(video, channelInfo[0]);
   };
 
   return (

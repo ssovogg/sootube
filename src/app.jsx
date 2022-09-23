@@ -19,7 +19,7 @@ function App({ youtube }) {
 
   return (
     <>
-      <AppRouter videos={videos} onSearch={search} />
+      <AppRouter videos={videos} onSearch={search} youtube={youtube} />
     </>
   );
 }

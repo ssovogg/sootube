@@ -1,23 +1,47 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from '../components/Layout/Header/Header';
-import Channel from './Channel/Channel';
-import Main from './Main';
-import Player from './Player';
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "../components/Layout/Header/Header";
+import Channel from "./Channel/Channel";
+import Main from "./Main";
+import Player from "./Player";
 
-const AppRouter = ({ videos, onSearch }) => {
+const AppRouter = ({ videos, onSearch, youtube }) => {
   const [video, setVideo] = useState();
-  const setVideoHandler = (video) => setVideo(video);
+  const [channelInfo, setChannelInfo] = useState();
+  const setVideoHandler = (video, channelInfo) => {
+    setVideo(video);
+    setChannelInfo(channelInfo);
+  };
 
   return (
-      <BrowserRouter>
-        <Header onSearch={onSearch} />
+    <BrowserRouter>
+      <Header onSearch={onSearch} />
       <Routes>
-        <Route path="/sootube" element={<Main videos={videos} setVideoHandler={setVideoHandler}/>} />
-        <Route path="/player" element={<Player videos={videos} video={video} />} />
+        <Route
+          path="/sootube"
+          element={
+            <Main
+              videos={videos}
+              setVideoHandler={setVideoHandler}
+              youtube={youtube}
+            />
+          }
+        />
+        <Route
+          path="/player"
+          element={
+            <Player
+              videos={videos}
+              video={video}
+              channelInfo={channelInfo}
+              youtube={youtube}
+            />
+          }
+        />
         <Route path="/channel" element={<Channel />} />
       </Routes>
-      </BrowserRouter>
-  )};
+    </BrowserRouter>
+  );
+};
 
 export default AppRouter;
