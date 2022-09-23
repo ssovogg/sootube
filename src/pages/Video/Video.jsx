@@ -2,14 +2,12 @@ import React from "react";
 import classes from "./Video.module.css";
 
 const Video = ({ video, channelInfo }) => {
-  const { title, description, channelTitle } = video.snippet;
-  const { url } = channelInfo.snippet.thumbnails.medium;
-
   return (
     <section className={classes.video}>
       <div className={classes.iframe}>
         <iframe
-          id="ytplayer"
+          title={video.id}
+          id={video.id}
           type="text/html"
           src={`https://www.youtube.com/embed/${video.id}`}
           frameBorder="0"
@@ -17,15 +15,18 @@ const Video = ({ video, channelInfo }) => {
         />
       </div>
       <div className={classes.info}>
-        <h2>{title}</h2>
+        <h2>{video.snippet.title}</h2>
         <div className={classes.info_detail}>
-          <img src={url} alt={title} />
+          <img
+            src={channelInfo.snippet.thumbnails.medium.url}
+            alt={video.snippet.title}
+          />
           <div>
             <div className={classes.channel_info}>
-              <h3>{channelTitle}</h3>
+              <h3>{video.snippet.channelTitle}</h3>
               <span>{channelInfo.snippet.description}</span>
             </div>
-            <pre>{description}</pre>
+            <pre>{video.snippet.description}</pre>
           </div>
         </div>
       </div>

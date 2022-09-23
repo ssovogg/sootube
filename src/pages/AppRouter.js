@@ -22,7 +22,7 @@ const AppRouter = ({ videos, onSearch, youtube }) => {
           element={
             <Main
               videos={videos}
-              setVideoHandler={setVideoHandler}
+              clickVideo={setVideoHandler}
               youtube={youtube}
             />
           }
