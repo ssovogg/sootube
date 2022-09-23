@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./Video.module.css";
 
-const Video = ({ video, channelInfo }) => {
+const Video = ({ video }) => {
+  console.log(video);
   return (
     <section className={classes.video}>
       <div className={classes.iframe}>
@@ -18,14 +19,14 @@ const Video = ({ video, channelInfo }) => {
       <div className={classes.info}>
         <h2>{video.snippet.title}</h2>
         <div className={classes.info_detail}>
-          <img
+          {/* <img
             src={channelInfo.snippet.thumbnails.medium.url}
             alt={video.snippet.title}
-          />
+          /> */}
           <div>
             <div className={classes.channel_info}>
               <h3>{video.snippet.channelTitle}</h3>
-              <span>{channelInfo.snippet.description}</span>
+              {/* <span>{channelInfo.snippet.description}</span> */}
             </div>
             <pre>{video.snippet.description}</pre>
           </div>

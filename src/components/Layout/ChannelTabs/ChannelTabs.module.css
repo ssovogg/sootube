@@ -1,0 +1,24 @@
+@value cdGrey, cWhite, cBlack, cddGrey, cGrey from '../../common/color.css';
+
+.tabs {
+  padding: 1.5em 0.8em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: cBlack;
+  border-right: 1px solid cddGrey;
+}
+
+.tabs li {
+  margin-bottom: 1.5em;
+}
+
+.tabs img {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background: #333;
+}
+.tabs span {
+  color: cWhite;
+}
